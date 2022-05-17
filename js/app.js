@@ -80,11 +80,14 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { 
   //eslint-disable-line
-   sumArr = 0;
- for (let i=0; i < testArray.length; i++) {
-    sumArr += testArray[i];
- }
-  return [sumArr, `${testArray} was passed in as an array of numbers, and ${sumArr} is their sum.`]
+  let a = sumArr[0];
+  let b = sumArr[1];
+  let c = sumArr[2];
+
+  let bc = sum(b,c)[0];
+  let abc = sum (a, bc)[0];
+   sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0];
+  return [abc, `${testArray} was passed in as an array of numbers, and ${abc} is their sum.`]
   //console.log(testArray);
 }
 
@@ -135,19 +138,20 @@ This function should be dynamic, accepting an array of any length.
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
-// Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+// // Write your code here
+// let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-function multiplyAnyArray(dynamicArray) { 
-  //eslint-disable-line
-let length= testDynamicArray.length;
-for (let 1 = 0; i < length; i++) {
- testDynmaicArray[i] *=1;
-}
-return [`The numbers ${testDynamicArray} have a product of ${}`]
-}
+// function multiplyAnyArray(dynamicArray) { 
+//   //eslint-disable-line
+// let length= testDynamicArray.length;
+// for (let 1 = 0; i < length; i++) {
+//  testDynmaicArray[i] *=1;
+//  testDynamicArray.push(); 
+// }
+// return [`The numbers ${testDynamicArray} have a product of ${}`]
+// }
 
-// Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyAnyArray(testDynamicArray);
+// // Here is the test for multiplyArray(); uncomment it to run it
+// testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
