@@ -86,7 +86,6 @@ function sumArray(sumArr) {
 
   let bc = sum(b,c)[0];
   let abc = sum (a, bc)[0];
-   sum(sumArr[0], sum(sumArr[1], sumArr[2])[0])[0];
   return [abc, `${testArray} was passed in as an array of numbers, and ${abc} is their sum.`]
   //console.log(testArray);
 }
@@ -110,11 +109,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { 
   //eslint-disable-line
-  let multiply=1;
-  for (let i = 0; i < testArray.length; i++) {
-     multiply *= testArray[i];
-  } 
-   return [multiply, `The numbers ${testArray} have a product of ${multiply}.`]
+  let a = multArr[0];
+  let b = multArr[1];
+  let c = multArr[2];
+  
+  let bc = multiply (b,c)[0];
+  let abc = multiply (a, bc)[0];
+
+   return [abc, `The numbers ${testArray} have a product of ${abc}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -139,19 +141,27 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // // Write your code here
-// let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
-// function multiplyAnyArray(dynamicArray) { 
-//   //eslint-disable-line
-// let length= testDynamicArray.length;
-// for (let 1 = 0; i < length; i++) {
-//  testDynmaicArray[i] *=1;
-//  testDynamicArray.push(); 
-// }
-// return [`The numbers ${testDynamicArray} have a product of ${}`]
-// }
+function multiplyAnyArray(dynamicArray) { 
+  //eslint-disable-line
+  let a = dynamicArray [0];
+  let b = dynamicArray [1];
+  let c = dynamicArray [2];
+  let d = dynamicArray [3];
+  let e = dynamicArray [4];
 
-// // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+  let de = multiply(d,e)[0];
+  let cde = multiply(c, de)[0];
+  let bcde = multiply(b, cde)[0];
+  let abcde = multiply(a, bcde)[0];
+
+ testDynamicArray.push(); 
+
+return [abcde, `The numbers ${testDynamicArray} have a product of ${abcde}.`]
+}
+
+// Here is the test for multiplyArray(); uncomment it to run it
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
