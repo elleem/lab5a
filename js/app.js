@@ -113,7 +113,7 @@ function multiplyArray(multArr) {
   let b = multArr[1];
   let c = multArr[2];
   
-  let bc = multiply(b,c)[0];
+  let bc = multiply (b,c)[0];
   let abc = multiply (a, bc)[0];
 
    return [abc, `The numbers ${testArray} have a product of ${abc}.`]
@@ -145,13 +145,20 @@ let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { 
   //eslint-disable-line
-  let
-let length= testDynamicArray.length;
-for (let 1 = 0; i < length; i++) {
- testDynmaicArray[i] *=1;
+  let a = dynamicArray [0];
+  let b = dynamicArray [1];
+  let c = dynamicArray [2];
+  let d = dynamicArray [3];
+  let e = dynamicArray [4];
+
+  let de = multiply(d,e)[0];
+  let cde = multiply(c, de)[0];
+  let bcde = multiply(b, cde)[0];
+  let abcde = multiply(a, bcde)[0];
+
  testDynamicArray.push(); 
-}
-return [`The numbers ${testDynamicArray} have a product of ${}`]
+
+return [abcde, `The numbers ${testDynamicArray} have a product of ${abcde}.`]
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
